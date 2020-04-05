@@ -17,10 +17,15 @@
   },
   "homepage": "https://github.com/theearapp/TheEarApp#readme",
   "dependencies": {
+    "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "http": "0.0.0",
+    "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.8.11"
+    "mongo-sanitize": "^1.1.0",
+    "mongoose": "^5.8.11",
+    "random": "^2.2.0"
   }
 }

@@ -14,6 +14,12 @@ const db = require('./Sources/db');
  * @param {ServerResponse} res The HTTP Response.
  * @param {ServerResponse} next A callback that returns an error.
  */
+
+function logErrors(err, req, res, next) {
+    console.error(err.stack);
+    next(err);
+  }
+  
 function logErrors(err, req, res, next) {
     console.error(err.stack);
     next(err);
