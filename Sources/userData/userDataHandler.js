@@ -105,7 +105,7 @@ class UserDataHandler {
               // Overwrite / assign newly generated token to deviceInfo prior to inserting to user document.
               tokenHandler.insertToken(newToken, function (insertSuccess) {
                 if (insertSuccess == true) {
-                  user.token = newToken;
+                  user.tokenInfo = newToken;
                   user.password = undefined;
                   callback(user, 'Successfully Logged In', 1);
                 } else {
