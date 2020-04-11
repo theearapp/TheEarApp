@@ -72,7 +72,7 @@ class UserDataHandler {
 
       logIn(username, password, callback) {
         
-        // Finds user with given username and returns User object without id or interests
+        // Finds user with given username and returns User object without id or interest
         User.findOne({'username': username}, (err, user) => {
           if (err) {
             callback(null, err, 1004);
