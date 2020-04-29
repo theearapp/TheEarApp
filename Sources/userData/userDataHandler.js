@@ -83,7 +83,7 @@ class UserDataHandler {
             callback(null, 'This user does not match any HMU accounts. Please sign up', 1102);
             return;
           }
-    
+          
           user.comparePassword(password, (err, isMatch) => {
             if (err) {
               callback(null, 'Error has occured', 1004);
@@ -122,24 +122,25 @@ class UserDataHandler {
           callback(false, 'Missing token or userid', 1100);
           return;
         }
+        callback(true, 'testing', 1)
+        return;
+        // User.findOne({ 'uid': userID }, { 'interests': 0, '__v': 0 }, function (err, user) {
+        //   if (err) {
+        //     callback(false, 'Error has occured', 1004);
+        //     return;
+        //   }
     
-        User.findOne({ 'uid': userID }, { 'interests': 0, '__v': 0 }, function (err, user) {
-          if (err) {
-            callback(false, 'Error has occured', 1004);
-            return;
-          }
+        //   if (!user) {
+        //     callback(false, 'Failed to logout', 1102);
+        //     return;
+        //   }
     
-          if (!user) {
-            callback(false, 'Failed to logout', 1102);
-            return;
-          }
-    
-          const userToken = new UserTokenHandler(User, user);
-          userToken.invalidateToken(token, function (isLogout, message, errorCode) {
-            callback(isLogout, message, errorCode);
-            return;
-          });
-        });
+        //   const userToken = new UserTokenHandler(User, user);
+        //   userToken.invalidateToken(token, function (isLogout, message, errorCode) {
+        //     callback(isLogout, message, errorCode);
+        //     return;
+        //   });
+        // });
       }
 }
 
