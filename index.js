@@ -4,7 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const UserRouter = require('./Sources/userData/userRouter');
 const db = require('./Sources/db');
 /**
