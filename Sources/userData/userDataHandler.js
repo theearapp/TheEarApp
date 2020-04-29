@@ -122,7 +122,7 @@ class UserDataHandler {
           callback(false, 'Missing token or userid', 1100);
           return;
         }
-        console.log('test for updating')l
+        console.log('test for updating');
         callback(true, 'testing', 1)
         return;
         // User.findOne({ 'uid': userID }, { 'interests': 0, '__v': 0 }, function (err, user) {
