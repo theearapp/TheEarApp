@@ -80,7 +80,7 @@ class UserDataHandler {
           }
     
           if (user == null) {
-            callback(null, 'This user does not match any HMU accounts. Please sign up', 1102);
+            callback(null, 'This user does not match any accounts. Please sign up', 1102);
             return;
           }
           
