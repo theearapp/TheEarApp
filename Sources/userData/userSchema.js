@@ -12,10 +12,7 @@ const userSchema = new Schema({
     index: {unique: true},
     lowercase: true},
 
-  name: {
-    first: {type: String, required: false},
-    last: {type: String, required: false},
-  },
+  fullname: {type: String},
   phone: {
     number: {type: String, index: {unique: true, sparse: true}},
     isVerified: Boolean,
