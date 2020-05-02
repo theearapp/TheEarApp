@@ -15,7 +15,8 @@ const userSchema = new Schema({
   fullname: {type: String},
   phone: {
     number: {type: String, index: {unique: true, sparse: true}},
-    isVerified: Boolean,
+    isVerified: {type: Boolean},
+    vcode: {type: String}
   },
   email: {
     value: {type: String, index: {unique: true, sparse: true}, lowercase: true},

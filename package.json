@@ -26,6 +26,7 @@
     "method-override": "^3.0.0",
     "mongo-sanitize": "^1.1.0",
     "mongoose": "^5.8.11",
-    "random": "^2.2.0"
+    "random": "^2.2.0",
+    "twilio": "^3.43.0"
   }
 }
